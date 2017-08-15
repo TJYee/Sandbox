@@ -1,5 +1,10 @@
-extends layout
+extends layout.pug
 
 block content
     h1= title
-    p Welcome to #{title}
+    .sidebar
+        block sidebar
+            p This is the Sidebar
+    .primary
+        block primary
+            p This is primary content

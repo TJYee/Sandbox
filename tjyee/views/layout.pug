@@ -1,7 +1,14 @@
-doctype html
 html
     head
-        title= title
-        link(rel='stylesheet', href='/stylesheets/style.css')
+        title TJYee - #{title}
+        block scripts
+
     body
         block content
+
+        block foot
+            p This site will be undergoing construction as I practice more web development.
+            p
+                | Please visit my #[a(href="https://github.com/TJYee/Sandbox/tree/master/tjyee") GitHub]
+                | to monitor development.
+            p Taylor Yee 2017
