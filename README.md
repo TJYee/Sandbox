@@ -1,2 +1,2 @@
 # Sandbox
-This repository is for any exercises or works in progress.
+This repository is a collection of [TJYee](https://github.com/TJYee)'s tutorials, excercises, and small projects.
