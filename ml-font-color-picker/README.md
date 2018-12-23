@@ -1,5 +1,5 @@
 # Machine Learning Font Color Picker
-Project from [Machine Learning Tutorial for Beginners - USING JAVASCRIPT!](https://youtu.be/9Hz3P1VgLz4) by [LearnCode.academy](https://www.youtube.com/channel/UCVTlvUkGslCV_h-nSAId8Sw).
+A tutorial project from [Machine Learning Tutorial for Beginners - USING JAVASCRIPT!](https://youtu.be/9Hz3P1VgLz4) by [LearnCode.academy](https://www.youtube.com/channel/UCVTlvUkGslCV_h-nSAId8Sw).
 
 ## This Project Uses
 - HTML/CSS
