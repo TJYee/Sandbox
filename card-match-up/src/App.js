@@ -89,43 +89,26 @@ class App extends PureComponent {
   };
 
   render() {
-    return ( <
-      div >
-      <
-      Header restartGame = {
-        this.restartGame
-      }
-      /> {
-        this.isGameOver() ? < GameOver restartGame = {
-          this.restartGame
+    return (
+      <div>
+        <Header restartGame={this.restartGame} />
+        {this.isGameOver() ? <GameOver restartGame={this.restartGame} /> :
+          <div className="grid-container">
+            {
+              this.state.shuffledCard.map((cardNumber, index) =>
+                <Card
+                  key={index}
+                  id={index}
+                  cardNumber={cardNumber}
+                  isFlipped={this.state.isFlipped[index]}
+                  handleClick={this.handleClick}
+                />
+              )
+            }
+          </div>
         }
-        /> : <
-        div className = "grid-container" > {
-            this.state.shuffledCard.map((cardNumber, index) =>
-              <
-              Card key = {
-                index
-              }
-              id = {
-                index
-              }
-              cardNumber = {
-                cardNumber
-              }
-              isFlipped = {
-                this.state.isFlipped[index]
-              }
-              handleClick = {
-                this.handleClick
-              }
-              />
-            )
-          } <
-          /div>
-      } <
-      /div>
+      </div>
     );
   }
 }
-
 export default App;
