@@ -1,32 +1,65 @@
 import random
 
 
-class Die():
-    '''
-    The Die object contains information and actions of a singal Die
+class Die(object):
+    """
+    A class used to represent a Die
 
+    ...
 
-    Args:
-        side_start (int): The side_start is used for stating the lowest side value of the Die
-        max_side (int): The max_side is used for stating how many sides are on the Die
-        position (int): The position is used for keeping track of the Die
+    Attributes
+    ----------
+        __value : int
+            the current value of the Die (default is None)
+        side_min_value : int
+            the lowest side value (default is 1)
+        side_count : int
+            the number of sides on the Die (default is 6)
+        side_increment : int
+            the incremental side value between sides (default is 1)
 
+    Methods
+    -------
+    roll()
+        Rolls the Die to get a new random value of the Die
+    check_value()
+        Returns current value of Die
+    """
 
-    Attributes:
-        side_start (int): This is where we store side_start
-        max_side (int): This is where we store max_side
-        position (int): This is where we store position
-    '''
+    __value = None
 
-    def __init__(self, side_start, max_side, position):
+    def __init__(self, side_min_value=1, side_count=6, side_increment=1):
+        """
+        Parameters
+        ----------
+        side_min_value : int, optional
+            The lowest side value (default is 1)
+        side_count : int, optional
+            the number of sides on the Die (default is 6)
+        side_increment : int, optional
+            The incremental side value between sides (default is 1)
+        """
         print("Called Die constructor")
-        self.side_start = side_start
-        self.max_side = max_side
-        self.position = position
+        self.side_min_value = side_min_value
+        self.side_count = side_count
+        self.side_increment = side_increment
+
+    def roll(self):
+        """Rolls the Die to get a new random value of the Die"""
+        self.__value = random.randint(
+            self.side_min_value, self.side_count) * self.side_increment
+
+    def check_value(self):
+        """Returns current value of Die"""
+        return self.__value
 
 
-die1 = Die(1, 6, 1)
-
-print(die1.side_start)
-print(die1.max_side)
-print(die1.position)
+# Test Code
+die1 = Die(side_min_value=0, side_count=10, side_increment=10)
+print("Minimum side is: " + str(die1.side_min_value))
+print("Side count is: " + str(die1.side_count))
+print("Value is: " + str(die1.check_value()))
+die1.roll()
+print("Value is: " + str(die1.check_value()))
+die1.roll()
+print("Value is: " + str(die1.check_value()))
