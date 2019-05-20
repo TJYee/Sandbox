@@ -10,13 +10,13 @@ class Die(object):
     Attributes
     ----------
         __value : int
-            the current value of the Die (default is None)
+            The current value of the Die (default is None)
         side_min_value : int
-            the lowest side value (default is 1)
+            The lowest side value (default is 1)
         side_count : int
-            the number of sides on the Die (default is 6)
+            The number of sides on the Die (default is 6)
         side_increment : int
-            the incremental side value between sides (default is 1)
+            The incremental side value between sides (default is 1)
 
     Methods
     -------
@@ -35,7 +35,7 @@ class Die(object):
         side_min_value : int, optional
             The lowest side value (default is 1)
         side_count : int, optional
-            the number of sides on the Die (default is 6)
+            The number of sides on the Die (default is 6)
         side_increment : int, optional
             The incremental side value between sides (default is 1)
         """
@@ -55,11 +55,25 @@ class Die(object):
 
 
 # Test Code
-die1 = Die(side_min_value=0, side_count=10, side_increment=10)
-print("Minimum side is: " + str(die1.side_min_value))
-print("Side count is: " + str(die1.side_count))
-print("Value is: " + str(die1.check_value()))
-die1.roll()
-print("Value is: " + str(die1.check_value()))
-die1.roll()
-print("Value is: " + str(die1.check_value()))
+# die1 = Die(side_min_value=0, side_count=10, side_increment=10)
+# print("Minimum side is: " + str(die1.side_min_value))
+# print("Side count is: " + str(die1.side_count))
+# print("Value is: " + str(die1.check_value()))
+# die1.roll()
+# print("Value is: " + str(die1.check_value()))
+# die1.roll()
+# print("Value is: " + str(die1.check_value()))
+
+game_play = True
+print("Beginning of Game Loop")
+while(game_play):
+    print("Start of Game")
+    print("End of Game")
+    user_input = input("Would you like to continue to play? ")
+    while(not(user_input in ["yes", "no"])):
+        print("I do not understand that response.")
+        user_input = input("Would you like to continue to play? ")
+    if(user_input == "no"):
+        game_play = False
+
+print("End of Game Loop.")
