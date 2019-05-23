@@ -70,9 +70,9 @@ while(game_play):
     print("Start of Game")
 
     # Create empty list for dice
-    dice_list = {}
+    dice_list = []
     for i in range(5):
-        dice_list[i] = Die()
+        dice_list.append(Die())
 
     # Roll each Die in list to obtain a value
     for die in dice_list:
