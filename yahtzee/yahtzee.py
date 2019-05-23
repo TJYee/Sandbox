@@ -74,9 +74,10 @@ while(game_play):
     for i in range(5):
         dice_list[i] = Die()
 
+    # Roll each Die in list to obtain a value
     for die in dice_list:
         die.roll()
-        print(die.check_value())
+        print(die.check_value())  # Print value of Die
 
     print("End of Game")
 
