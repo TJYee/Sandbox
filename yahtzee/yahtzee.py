@@ -68,7 +68,18 @@ game_play = True
 print("Beginning of Game Loop")
 while(game_play):
     print("Start of Game")
+
+    # Create empty list for dice
+    dice_list = {}
+    for i in range(5):
+        dice_list[i] = Die()
+
+    for die in dice_list:
+        die.roll()
+        print(die.check_value())
+
     print("End of Game")
+
     user_input = input("Would you like to continue to play? ")
     while(not(user_input in ["yes", "no"])):
         print("I do not understand that response.")
